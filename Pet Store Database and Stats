@@ -1,0 +1,28 @@
+--Create a pet store database
+
+CREATE TABLE cats(
+id integer PRIMARY KEY,
+gender TEXT,
+eye_color TEXT,
+fur_color TEXT,
+price INTEGER,
+age INTEGER);
+
+insert into cats values (1,'m','blue','orange',500,1);
+insert into cats values (2,'m','blue','orange',500,1);
+insert into cats values (3,'f','hazel','white',300,2);
+insert into cats values (4,'f','brown','green',300,4);
+insert into cats values (5,'m','hazel','orange',200,2);
+insert into cats values (6,'f','green','black',200,3);
+insert into cats values (7,'f','pink','white',400,1);
+insert into cats values (8,'m','gray','tabby',300,2);
+insert into cats values (9,'f','brown','tabby',200,2);
+insert into cats values (10,'m','green','white',400,1);
+insert into cats values (11,'m','brown','tabby',200,2);
+insert into cats values (12,'f','blue','tabby',300,3);
+insert into cats values (13,'f','hazel','orange',300,3);
+insert into cats values (14,'m','green','white',200,2);
+insert into cats values (15,'f','blue','gray',300,3);
+
+select * from cats order by gender;
+select eye_color, sum(price) from cats group by eye_color;
